@@ -1,6 +1,7 @@
 # Instructions
 
 Create a GitHub page for the project
+"This is a line from Rstudio"
 
 ## GitHub:
 #### 1. Create a GitHub account and Sign in
