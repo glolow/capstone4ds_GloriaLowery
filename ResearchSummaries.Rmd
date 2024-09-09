@@ -1,0 +1,68 @@
+---
+title: "Research Summaries"
+author: "Gloria"
+date: "2024-09-09"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Cribari-Neto, F., & Zeileis, A. (2010). Beta Regression in R. Journal of Statistical Software, 34(2), 1–24. https://doi.org/10.18637/jss.v034.i02 
+•	Other proportion data is inherently proportional, in that it’s not possible to count “successes” or “failures”, but instead is derived, for example, by dividing one continuous variable by a given denominator value.  The sodium intake example below is an example of this.  
+•	Another case of this kind of proportion data is when a proportion is assessed by subjective measurement.  For example, rating a diseased lawn subjectively on the area dead, such as “this plot is 10% dead, and this plot is 20% dead”.  Each observation is a percentage from 0 to 100%, or a proportion from 0 to 1.  This kind of data can be analyzed with beta regression. 
+•	If the numerator can be considered a count variable, Poisson regression or other methods for count data are usually suggested.  Beta regression can be conducted with the betareg function in the betareg package (Cribari-Neto and Zeileis, 2010).  With this function, the dependent variable varies between 0 and 1, but no observation can equal exactly zero or exactly one.  
+•	Some rates are expressed with numerators and denominators of different measurements or units.  For example, the number of cases of a disease per 100,000 people or the number of televisions per student’s home.  In these cases, the values are not limited to between 0 and 1, and beta regression is not appropriate.  
+
+
+## 2. Geissinger, Emilie A., et al. “A Case for Beta Regression in the Natural Sciences.” Ecosphere, vol. 13, no. 2, Feb. 2022, https://doi.org/10.1002/ecs2.3940. Accessed 11 Jan. 2023.
+•	Data in the natural sciences are often in the form of percentages or proportions that are continuous and bounded by 0 and 1. 
+•	We compared a linear model with angular transformation vs beta regression using data from two fields of the naturalsciences that produce continuous, bounded data: biogeochemistry and ecological elemental composition. 
+•	substantially different coefficient estimates from the back-calculated beta regression and angular transformation models. Beta regression provides reliable parameter estimates in natural science studies where effect sizes are considered as important as hypothesis testing.
+
+The angular transformation has the following effects: 
+•	Stabilizes variance
+The angular transformation stabilizes the variance in the sense that it makes the variance of the binomial proportion independent from φ. 
+•	Makes data appear normally distributed
+The angular transformation often makes the data appear normally distributed as well. 
+•	 The coefficient's sign indicates the direction of the relationship, and its size indicates the practical significance of the term's effect. 
+•	The sign of the coefficient indicates the direction of the relationship between the predictor and the outcome. A positive coefficient indicates a positive relationship, while a negative coefficient indicates an inverse relationship. 
+•	Predictor influence
+The size of the coefficient indicates how much the predictor contributes to the outcome. A large coefficient means the variable has a strong influence, while a near-zero coefficient means the variable has little influence. 
+
+
+## 3. Mehtätalo, Lauri, and Juha Lappi. Biometry for Forestry and Environmental Data : With Examples in R, CRC Press LLC, 2020. ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/uwf/detail.action?docID=6210791.
+•	But for continuous proportions, such as proportion of winter wood in a wood sample or vegetation cover data, the binomial distribution cannot be applied.
+•	Frequently, there is one additional complication when applying the beta regression to continuous proportions. According to any continuous distribution, the probability of any speciﬁc value is zero. Non-zero probabilities are obtained only for some intervals. Moreover, the pdf of beta distribution is not even deﬁned for 0 or 1. However, for continuous proportions it often happens that there are several zeroes and/or ones in the data. To model such data, we can use zero-one inﬂated beta regression. It works similarly to zero inﬂated Poisson or negative binomial model discussed in Section 8.2.9. The diﬀerence is that all zeroes are extra zeroes.
+
+
+
+
+## 4. Ferrari, S., & Cribari-Neto, F. (2004). Beta Regression for Modelling Rates and Proportions. Journal of Applied Statistics, 31(7), 799–815. https://doi.org/10.1080/0266476042000214501 
+
+-	Authors introduce a statistical method specifically designed for modeling data that are rates or proportions, which are constrained to lie between 0 and 1. Traditional linear regression models can be inappropriate for such data because they do not account for the bounded nature of the dependent variable. 
+-	The authors introduce beta regression, a technique that uses the beta distribution to model the distribution of the dependent variable, allowing for a flexible specification of the mean and variance. This method is particularly useful for cases where the data are not strictly continuous but rather restricted to the (0,1) interval, such as proportions or rates. AKA Explains the underlying statistical principles and estimation methods. 
+-	Discusses the theoretical foundation of beta regression, including its link function, underlying statistical principles, and the estimation process. 
+-	Paper includes practical examples and applications to illustrate how beta regression can be used effectively in real-world scenarios. 
+-	Advocates for beta regression as a robust tool for analyzing data that falls within the 0 to 1 range, offering improved model fit and interpretation for such datasets.
+
+
+## 5. Smith, John, and Alice Jones. "Average Percentage of Hours Dedicated to Unpaid Elderly Care: An Estimation Proposal Using a Sampling Strategy Assisted by a Beta Regression Model." Social Sciences & Humanities Open, vol. 10, 2023, pp. 1-12. doi:10.1016/j.ssaho.2023.100111.
+-	Estimates the proportion of time individuals dedicate to unpaid elderly care. The authors propose a new estimation technique that utilizes a sampling strategy enhanced by a beta regression model, which is particularly suitable for modeling proportions and rates. Data is presented as data with values between 0 and 1, such as the percentage of hours dedicated to care.
+-	 The findings from the paper confirm the beta regression model provides a more accurate and reliable method for estimating the average time spent on caregiving, accounting for variations across different population groups.
+-	The hope is that policymakers can use this data to better understand caregiving burdens and to design interventions that address the needs of unpaid caregivers.
+-	The paper concludes that this model offers an effective way to estimate caregiving time, providing valuable insights for social sciences and public health fields.
+
+
+## 6. Bellomare, Martina, Giuseppe Genova, Vincenzo Miano, and Paola Miano. "Gaslighting Exposure During Emerging Adulthood: Personality Traits and Vulnerability Paths." *International Journal of Psychological Research*, vol. 17, no. 1, 2024, pp. 29-39. Epub 12 June 2024. https://doi.org/10.21500/20112084.6306. 
+-	Studies the relationship between gaslighting exposure and specific personality traits in emerging adults, as well as the psychological vulnerability pathways that may make individuals more susceptible to manipulation.
+-	Through a survey-based approach, the authors collected data on personality traits (using a Big Five inventory) and gaslighting exposure. They also analyzed factors such as self-esteem, emotional regulation, and attachment styles to determine vulnerability patterns.
+-	From the abstract: authors applied a beta regression model mapping the Likert scale into the open interval (0,1). The main results show:
+o	(a) good-guy gaslighting is positively associated with manipulativeness and negatively associated with deceitfulness; 
+o	(b) glamour gaslighting has a negative association with separation insecurity and manipulativeness, but it is positively associated with irresponsibility; 
+o	(c) intimidator gaslighting has a positive association with separation insecurity and distractibility and a negative association with eccentricity and perceptual dysregulation; 
+o	(d) all three gaslighting categories are negatively associated with anhedonia and impulsivity. 
+-	The response variables (i.e. glamour gaslighting, good-guy gaslighting, and intimidator gaslighting) are defined in a Likert scale ranging from 1 to 5. Thus, a classical linear model is not appropriate. To overcome this limit, we applied a beta regression model for bounded responses, using the statistical software R3.5.1, mapping the Likert scale into the open interval (0,1) as showed in (Smithson & Verkuilen, 2006) and (Miano et al., 2021).
+0
+
